@@ -49,7 +49,9 @@ const ButtonsPage = () => {
                 Sidebar
             </Button>
 
-            
+            <Button variant="sidebarOutline">
+                Sidebar Outline
+            </Button>
         </div>
     );
 };
