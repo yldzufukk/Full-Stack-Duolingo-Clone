@@ -11,16 +11,16 @@ export const units = pgTable("unit" , {
     id: serial("id").primaryKey(),
     title: text("title").notNull(),
     description: text("description").notNull(),
-    courdeId: integer("course_id").references(() => courses.id, {onDelete: "cascade"}).notNull(),
+    courseId: integer("course_id").references(() => courses.id, {onDelete: "cascade"}).notNull(),
     order: integer("order").notNull(),
 });
 
 export const unitRelations = relations(units, ({many, one}) => ({
     course: one(courses, {
-        fields: [units.courdeId],
+        fields: [units.courseId],
         references: [courses.id],
     }),
-    lesson: many(lessons),
+    lessons: many(lessons),
 }));
 
 export const lessons = pgTable("lessons", {
