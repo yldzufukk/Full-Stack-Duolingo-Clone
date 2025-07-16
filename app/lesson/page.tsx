@@ -29,7 +29,7 @@ const LessonPage = async () => {
             initialLessonChallenges={lesson.challenges}
             initialHearts={userProgress.hearts}
             initialPercentage={initialPercentage}
-            userSubsription={undefined}
+            userSubsription={null}
         />
     );
 };
