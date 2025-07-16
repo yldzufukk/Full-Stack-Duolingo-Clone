@@ -1,5 +1,5 @@
 
-"use client";
+"use server";
 
 import db from "@/src/drizzle";
 import { getCourseById, getUserProgress } from "@/src/queries";

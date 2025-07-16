@@ -15,7 +15,6 @@ import { reduceHearts } from "@/actions/user-progress";
 import { useAudio, useWindowSize } from "react-use";
 import Image from "next/image";
 import { ResultCard } from "./result-card";
-import { useRouter } from "next/router";
 
 import Confetti from "react-confetti";
 
@@ -27,7 +26,7 @@ type Props = {
         completed: boolean;
         challengeOptions: typeof challengeOptions.$inferSelect[];
     })[];
-    userSubsription: any;
+    userSubsription: null;
 };
 
 export const Quiz = ( {
@@ -35,14 +34,12 @@ export const Quiz = ( {
     initialHearts,
     initialLessonId,
     initialLessonChallenges,
-    userSubsription
 }: Props) => {
     const { width, height } = useWindowSize();
 
-    const router = useRouter();
 
     const [ finishAudio ] = useAudio({ src: "/finish.mp3", autoPlay: true});
-
+    
     const [
         correctAudio,
         _c,
@@ -74,7 +71,7 @@ export const Quiz = ( {
 
     
     const onNext = () => {
-        setActiveIndex((current) => +1);
+     setActiveIndex((current) => current + 1);
     };
 
 
@@ -132,7 +129,7 @@ export const Quiz = ( {
                         return;
                     }
 
-                    correctControls.play();
+                    incorrectControls.play();
                     setStatus("wrong");
 
                     if (!response?.error) {
@@ -171,7 +168,7 @@ export const Quiz = ( {
                         width={100}
                     />
                     <h1 className="text-xl lg:text-3xl font-bold text-neutral-700">
-                        Great job! <br /> You've completed the lesson.
+                        Great job! <br /> You&apos;ve completed the lesson.
                     </h1>
                     <div className="flex items-center gap-x-4 w-full">
                         <ResultCard 
@@ -203,7 +200,7 @@ export const Quiz = ( {
             <Header 
                 hearts={hearts}
                 percentage={percentage}
-                hasActiveSubscription={!!userSubsription?.isActive}
+                hasActiveSubscription={false}
             />
             <div className="flex-1">
                 <div className="h-full flex items-center justify-center">
