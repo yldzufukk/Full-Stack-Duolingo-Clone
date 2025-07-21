@@ -122,5 +122,13 @@ export const refillHearts = async () => {
         throw new Error("Not enough points");
     }
 
-    await db.update(userProgress)
-}
+    await db.update(userProgress).set({
+        hearts: 5,
+        points: currentUserProgress.points - POINTS_TO_REFILL,
+    }).where(eq(userProgress.userId, currentUserProgress.userId));
+
+    revalidatePath("/shop");
+    revalidatePath("/learn");
+    revalidatePath("/quests");
+    revalidatePath("/leaderboard");
+};
