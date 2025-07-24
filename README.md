@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+Features:
+* 🌐 Next.js 14 & server actions
+* 🗣 AI Voices using Elevenlabs AI
+* 🎨 Beautiful component system using Shadcn UI
+* 🎭 Amazing characters thanks to KenneyNL
+* 🔐 Auth using Clerk
+* 🔊 Sound effects
+* ❤️ Hearts system
+* 🌟 Points / XP system
+* 💔 No hearts left popup
+* 🚪 Exit confirmation popup
+* 🔄 Practice old lessons to regain hearts
+* 🏆 Leaderboard
+* 🗺 Quests milestones
+* 🛍 Shop system to exchange points with hearts
+* 💳 Pro tier for unlimited hearts using Stripe
+* 🏠 Landing page
+* 📊 Admin dashboard React Admin
+* 🌧 ORM using DrizzleORM
+* 💾 PostgresDB using NeonDB
+* 🚀 Deployment on Vercel
+* 📱 Mobile responsiveness
+  
+### Prerequisites
 
-First, run the development server:
+**Node version 18.x.x**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Cloning the repository
+
+```shell
+https://github.com/yldzufukk/Full-Stack-Duolingo-Clone.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Setup .env file
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+```js
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
+CLERK_SECRET_KEY=""
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL="http://localhost:3000/learn"
+NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL="http://localhost:3000/learn"
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+DATABASE_URL=""
 
-## Deploy on Vercel
+STRIPE_API_KEY=""
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+NEXT_PUBLIC_APP_URL="http://localhost:3000"
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+STRIPE_WEBHOOK_SECRET=""
+
+```
+
+### Start the app
+
+```shell
+npm run dev
+```
+
+## Available commands
+
+Running commands with npm `npm run [command]`
+
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
+
+
+https://github.com/user-attachments/assets/3ffe7457-8658-47b8-8202-fa2241c3d5ee
+
+
+### Thank your the tutorial: Code with Antonio
