@@ -74,7 +74,7 @@ Running commands with npm `npm run [command]`
 <img width="1439" height="786" alt="2" src="https://github.com/user-attachments/assets/d7e881df-aec5-4e4c-952c-721bb18d6abb" />
 <img width="1439" height="786" alt="3" src="https://github.com/user-attachments/assets/aa139dba-b9d7-47e7-9331-faf47a9025d8" />
 <img width="1439" height="787" alt="4" src="https://github.com/user-attachments/assets/33e8993f-a3bf-4eca-be6d-814faefb803d" />
-<img width="1439" height="787" alt="5" src="https://github.com/user-attachments/assets/483fc967-1ad4-4d2f-999a-60a8c4849075" />
+<img width="1439" height="784" alt="6" src="https://github.com/user-attachments/assets/154c89ef-b171-47f1-b78a-28803808f83f" />
 <img width="1439" height="784" alt="6" src="https://github.com/user-attachments/assets/541cde69-708f-4f2d-8564-c8fd8b3378a9" />
 
 
