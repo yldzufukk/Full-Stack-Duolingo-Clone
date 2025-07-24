@@ -1,18 +1,14 @@
-import dynamic from "next/dynamic";
 import { redirect } from "next/navigation";
-
 import { isAdmin } from "@/lib/admin";
+import dynamic from "next/dynamic";
 
-const App = dynamic(() => import("./app"), { ssr: false });
+// Client tarafında dinamik olarak yüklenen bileşen
+const App = dynamic(() => import("./app"));
 
-const AdminPage = () => {
+export default function AdminPage() {
   if (!isAdmin()) {
     redirect("/");
   }
 
-  return ( 
-    <App />
-  );
-};
- 
-export default AdminPage;
+  return <App />;
+}
